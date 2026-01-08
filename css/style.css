@@ -36,6 +36,7 @@ body {
     right: 25px;
     z-index: 10;
     transition: transform 0.3s;
+    display: none;
 }
 
 .top_btn:hover{
