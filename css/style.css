@@ -29,6 +29,18 @@ body {
     color: #4d4d4d;
 }
 
+/* top 버튼 */
+.top_btn{
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    z-index: 10;
+    transition: transform 0.3s;
+}
+
+.top_btn:hover{
+    transform: translatey(-10px);
+}
 
 /* header 헤더 */
 #header {

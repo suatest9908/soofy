@@ -103,7 +103,7 @@ var swiper = new Swiper(".instaSwiper", {
     grabCursor: true,
 });
 
-// 
+// gnb 메뉴 클릭하면 해당 섹션으로 이동
 $(function () {
     $('a[href^="#"]').click(function (e) { // #으로 시작하는 a 태그 클릭 시
         e.preventDefault(); // 기본 이동 막기
@@ -116,4 +116,14 @@ $(function () {
             }, 500); // 0.5초 동안 부드럽게 이동
         }
     });
+});
+
+// top 버튼
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {//
+        $('.top_btn').fadeIn();//
+    } else {
+        $('.top_btn').fadeOut();//
+    }
 });
