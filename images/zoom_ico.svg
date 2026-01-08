@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_레이어_2" data-name="레이어 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.56 36.56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        stroke: #62bceb;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 3.13px;
+      }
+
+      .cls-3 {
+        stroke: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1" data-name="Layer 1">
+    <g>
+      <line class="cls-3" x1="17.56" y1="18.34" x2="34" y2="35"/>
+      <ellipse class="cls-1" cx="16.22" cy="16.43" rx="16.22" ry="16.43"/>
+      <g>
+        <line class="cls-2" x1="10" y1="16.43" x2="22.44" y2="16.43"/>
+        <line class="cls-2" x1="16.22" y1="10.13" x2="16.22" y2="22.73"/>
+      </g>
+    </g>
+  </g>
+</svg>
