@@ -1,0 +1,1470 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+@import url('https://fonts.cdnfonts.com/css/florencesans');
+
+@font-face {
+    font-family: 'Florencesans Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Florencesans Bold'), url('../font/Florsn02.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Pretendard';
+    font-size: 17px;
+    color: #4d4d4d;
+}
+
+/* top 버튼 */
+.top_btn{
+    position: fixed;
+    bottom: 30px;
+    right: 25px;
+    z-index: 10;
+    transition: transform 0.3s;
+    display: none;
+}
+
+.top_btn:hover{
+    transform: translatey(-10px);
+}
+
+/* header 헤더 */
+#header {
+    width: 1320px;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding-top: 14px;
+    box-sizing: border-box;
+    border-radius: 50px;
+    box-shadow: 0px 0px 26px #3d3d3d28;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    margin-left: -660px;
+    z-index: 999;
+}
+
+.logo {
+    margin-left: 47px;
+}
+
+.gnb {
+    display: flex;
+}
+
+.gnb li {
+    margin: 0 25px;
+}
+
+.gnb li a {
+    display: block;
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 18px;
+    color: #3d3d3d;
+    padding: 16px;
+    transition: color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.gnb li a:hover {
+    color: #66add3;
+}
+
+.gnb:has(a:hover) a:not(:hover) {
+    opacity: 0.3;
+}
+
+.util {
+    display: flex;
+    margin-right: 47px;
+}
+
+.util li a {
+    display: block;
+    margin-top: 14px;
+    margin-left: 15px;
+}
+
+
+/* banner 배너 */
+#main_banner {
+    background: url(../images/main_banner.png) no-repeat center;
+    height: 930px;
+}
+
+/* about 브랜드 소개 */
+#about_wrap {
+    width: 1320px;
+    margin: 0 auto;
+    height: 643px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 152px;
+    box-sizing: border-box;
+}
+
+.about_title {
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 45px;
+    color: #52B6E8;
+    padding: 13px 0;
+    padding-left: 41px;
+    margin-top: 14px;
+    margin-left: 56px;
+    background: url(../images/title_icon.png) no-repeat left center;
+}
+
+.about_text p {
+    font-size: 22px;
+    color: #4d4d4d;
+    line-height: 37px;
+    font-weight: 300;
+    margin-top: 60px;
+    margin-left: 97px;
+}
+
+.about_logo {
+    margin-right: 56px;
+}
+
+/* s o o 사이 간격 */
+.about_lg_top img {
+    margin-left: 18px;
+}
+
+.about_lg_btm {
+    position: relative;
+    margin-top: 18px;
+}
+
+/* 각 로고 글자에 애니메이션 효과 적용 */
+/* 위아래 */
+@keyframes up {
+    from {
+        transform: translatey(0);
+    }
+
+    to {
+        transform: translatey(-15px);
+    }
+}
+
+/* 아래위 */
+@keyframes down {
+    from {
+        transform: translatey(-15px);
+    }
+
+    to {
+        transform: translatey(0);
+    }
+}
+
+.s_logo {
+    animation: up 1.4s infinite ease-in-out alternate;
+}
+
+.o1_logo {
+    animation: down 1.4s infinite ease-in-out alternate;
+}
+
+.o2_logo {
+    animation: up 1.4s infinite ease-in-out alternate;
+}
+
+.f_logo {
+    position: absolute;
+    right: 252px;
+    animation: up 1.4s infinite ease-in-out alternate;
+}
+
+.y_logo {
+    position: absolute;
+    right: 110px;
+    animation: down 1.4s infinite ease-in-out alternate;
+}
+
+/* char 캐릭터 소개 */
+/* char 배경 */
+#char_wrap {
+    height: 1820px;
+    background: url(../images/char_bg.png) no-repeat top center;
+}
+
+.char_container {
+    width: 1320px;
+    height: 1820px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 80px;
+}
+
+/* 3d 캐릭터에 애니메이션 효과 적용  */
+@keyframes up_3d {
+    from {
+        transform: translatey(0);
+    }
+
+    to {
+        transform: translatey(-30px);
+    }
+
+}
+
+.char_3d {
+    width: 336px;
+    display: block;
+    animation: up_3d 2s infinite ease-in-out alternate;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.char_line {
+    margin-top: 276px;
+}
+
+.char_container p {
+    font-size: 23px;
+    color: #4d4d4d;
+    line-height: 40px;
+    font-weight: 300;
+    margin-top: 52px;
+}
+
+.char_container h1 {
+    margin-top: 98px;
+    font-size: 38px;
+    color: #5EBDF2;
+}
+
+.char_contents {
+    position: relative;
+}
+
+/* char 사이드 구름 위치 */
+.reveal_cloud_l {
+    position: absolute;
+    top: 347px;
+    left: 188px;
+}
+
+.reveal_cloud_r {
+    position: absolute;
+    bottom: -22px;
+    right: 159px;
+}
+
+.char_side_cd {
+    position: relative;
+}
+
+/* char 사이드 수피 캐릭터에 애니메이션 효과 적용  */
+@keyframes char_cd_down {
+    from {
+        transform: translatey(0);
+    }
+
+    to {
+        transform: translatey(15px);
+    }
+}
+
+@keyframes char_cd_down-up {
+    from {
+        transform: translatey(0);
+    }
+
+    to {
+        transform: translatey(-15px);
+    }
+}
+
+.char_cd_l {
+    animation: char_cd_down 2s infinite ease-in-out alternate;
+}
+
+.char_cd_r {
+    animation: char_cd_down-up 2s infinite ease-in-out alternate;
+}
+
+.char_section {
+    position: relative;
+    margin-top: 197px;
+}
+
+.char_pd {
+    display: flex;
+    justify-content: center;
+    gap: 152px;
+    position: relative;
+    z-index: 1;
+    height: 185px;
+    /* transition: 0.3s; */
+}
+
+.char_pd li:nth-child(1) img,
+.char_pd li:nth-child(3) img {
+    transform: translateY(15px);
+}
+
+.char_pd li img {
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.char_pd li img:hover {
+    transform: translateY(-70px) scale(1.1) rotateZ(10deg);
+}
+
+/* 무드등 이미지 변경 시작 */
+.char_pd li .char_pd3_box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.char_pd li .char_pd3_box .char_pd3_origin {
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+.char_pd li .char_pd3_box .char_pd3_hover {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.char_pd li:hover .char_pd3_box .char_pd3_origin {
+    opacity: 0;
+    transform: translateY(-50px) scale(1.1) rotate(10deg);
+}
+
+.char_pd li:hover .char_pd3_box .char_pd3_hover {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50px) scale(1.1) rotate(10deg);
+}
+
+/* 무드등 이미지 변경 끝 */
+
+.char_cd {
+    display: flex;
+    position: absolute;
+    top: 34px;
+    left: 50%;
+    margin-left: -612px;
+    z-index: 0;
+}
+
+/* .char_btn-bubble {
+    display: inline-block;
+    background-color: #5EBDF2;
+    color: #fff;
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 18px;
+    padding: 14px 25px;
+    border-radius: 30px;
+    margin-top: 140px;
+    transition: 0.4s ease-in-out;
+    box-sizing: border-box;
+}
+
+.char_btn-bubble:hover {
+    color: #5EBDF2;
+    background-color: #fff;
+} */
+
+/*  char VIEW MORE 버튼 스타일 적용 */
+.char_btn-bubble {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #5EBDF2;
+    color: #fff;
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 18px;
+    padding: 14px 25px;
+    border-radius: 30px !important;
+    margin-top: 140px;
+    -webkit-transition: color 0.45s;
+    transition: color 0.45s;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.char_btn-bubble .btn-bubble-inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.char_btn-bubble .btn-bubble-itembox {
+    position: relative;
+    display: block;
+    height: 100%;
+    -webkit-filter: url(#bubble-start);
+    filter: url(#bubble-start);
+}
+
+
+@supports ((-webkit-filter: url("#bubble-start")) or (filter: url("#bubble-start"))) .char_btn-bubble .btn-bubble-item {
+    -webkit-transform: translate3d(0, 150%, 0) scale(1.4);
+    transform: translate3d(0, 150%, 0) scale(1.4);
+}
+
+.char_btn-bubble .btn-bubble-item {
+    position: absolute;
+    top: 0;
+    width: 35%;
+    height: 100%;
+    background: #fff;
+    border-radius: 100%;
+    -webkit-transform: translate3d(0, 150%, 0) scale(1.7);
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    -webkit-transition: -webkit-transform 0.45s;
+    transition: -webkit-transform 0.45s;
+    transition: transform 0.45s;
+    transition: transform 0.45s, -webkit-transform 0.45s;
+}
+
+.char_btn-bubble .btn-bubble-item:nth-of-type(1) {
+    left: 0%;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.char_btn-bubble .btn-bubble-item:nth-of-type(2) {
+    left: 30%;
+    -webkit-transition-delay: 0.08s;
+    transition-delay: 0.08s;
+}
+
+.char_btn-bubble .btn-bubble-item:nth-of-type(3) {
+    left: 60%;
+    -webkit-transition-delay: 0.16s;
+    transition-delay: 0.16s;
+}
+
+.char_btn-bubble .btn-bubble-item:nth-of-type(4) {
+    left: 90%;
+    -webkit-transition-delay: 0.24s;
+    transition-delay: 0.24s;
+}
+
+.char_btn-bubble:hover {
+    color: #5EBDF2;
+}
+
+.char_btn-bubble:hover .btn-bubble-item {
+    transform: translateZ(0) scale(1.7);
+}
+
+/* pd 프로덕트(상품 소개) */
+#pd_wrap {
+    height: 2520px;
+    background: url(../images/pd_bg.png) no-repeat top center;
+}
+
+.pd_container {
+    width: 1320px;
+    height: 2520px;
+    margin: 0 auto;
+    padding-top: 152px;
+    box-sizing: border-box;
+}
+
+.pd_title {
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 45px;
+    color: #52B6E8;
+    padding: 13px 0;
+    padding-left: 41px;
+    background: url(../images/title_icon.png) no-repeat left center;
+    display: table;
+    margin: 0 auto;
+}
+
+.pd_info {
+    margin-top: 20px;
+    margin-left: 5px;
+    text-align: left;
+}
+
+.pd_name {
+    display: block;
+    font-family: 'Pretendard';
+    font-weight: 700;
+    color: #333;
+    font-size: 20px;
+}
+
+.pd_desc {
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 12px;
+}
+
+.pd_price {
+    font-weight: 700;
+    font-size: 19px;
+    color: #48A7DA;
+    margin-top: 12px;
+}
+
+/* pd cozy home */
+.pd_cozy_section {
+    margin-top: 122px;
+    position: relative;
+}
+
+.pd_cozy_title {
+    display: inline-block;
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 33px;
+    background-color: #A6DBF8;
+    color: #fff;
+    padding: 12px 38px;
+    box-sizing: border-box;
+    border-radius: 0 50px 50px 90px;
+}
+
+.pd_cozy_top {
+    display: flex;
+    margin-top: 54px;
+    gap: 30px;
+}
+
+.pd_cozy_btm {
+    display: flex;
+    justify-content: right;
+    margin-top: 65px;
+    gap: 30px;
+}
+
+/* pd 사이드 구름 위치 */
+.pd_side_cd {
+    position: absolute;
+}
+
+.pd_cd_r {
+    width: 314px;
+    top: 178px;
+    right: 70px;
+    animation: pd_cd_up 2s infinite ease-in-out alternate;
+}
+
+.pd_cd_l {
+    width: 343px;
+    bottom: 154px;
+    left: 40px;
+    animation: pd_cd_down 2s infinite ease-in-out alternate;
+}
+
+/* pd 사이드 구름 이미지에 애니메이션 효과 적용 */
+@keyframes pd_cd_up {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pd_cd_down {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(15px);
+    }
+}
+
+/* pd1(머그컵) 호버 시 이미지 변경 */
+.pd1_img_box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pd1_img_box img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pd1_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.pd1_img_box:hover .pd1_hover {
+    opacity: 1;
+}
+
+/* pd2(쿠션) 호버 시 이미지 변경 */
+.pd2_img_box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pd2_img_box img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pd2_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.pd2_img_box:hover .pd2_hover {
+    opacity: 1;
+}
+
+/* pd3(매트) 호버 시 이미지 변경 */
+.pd3_img_box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pd3_img_box img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pd3_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.pd3_img_box:hover .pd3_hover {
+    opacity: 1;
+}
+
+/* pd4(무드등) 호버 시 이미지 변경 */
+.pd4_img_box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pd4_img_box img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pd4_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.pd4_img_box:hover .pd4_hover {
+    opacity: 1;
+}
+
+/* pd daily carry */
+.pd_daily_seciton {
+    margin-top: 80px;
+}
+
+.pd_daily_title {
+    display: inline-block;
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 33px;
+    background-color: #A6DBF8;
+    color: #fff;
+    padding: 12px 41px;
+    box-sizing: border-box;
+    border-radius: 0 50px 50px 90px;
+    margin-top: 80px;
+}
+
+.pd_daily {
+    margin-top: 54px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* pd5(키링) 호버 시 이미지 변경 */
+.pd5_img_box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pd5_img_box img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pd5_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.pd5_img_box:hover .pd5_hover {
+    opacity: 1;
+}
+
+/* pd6(에코백) 호버 시 이미지 변경 */
+.pd6_img_box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pd6_img_box img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pd6_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.pd6_img_box:hover .pd6_hover {
+    opacity: 1;
+}
+
+/* pd7(우산) 호버 시 이미지 변경 */
+.pd7_img_box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.pd7_img_box img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.pd7_hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.pd7_img_box:hover .pd7_hover {
+    opacity: 1;
+}
+
+#event_banner {
+    width: 100%;
+    text-align: center;
+}
+
+#event_banner img {
+    display: block;
+    margin: 0 auto;
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+}
+
+/* sel 셀렉션 */
+#sel_wrap {
+    width: 1320px;
+    height: 1320px;
+    margin: 0 auto;
+    padding-top: 152px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.sel_title {
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 45px;
+    color: #52B6E8;
+    padding: 13px 0;
+    padding-left: 41px;
+    background: url(../images/title_icon.png) no-repeat left center;
+    display: table;
+    margin: 0 auto;
+}
+
+.sel_line{
+    display: block;
+    margin: 60px auto 0;
+}
+
+
+/* sel swiper (셀렉션 슬라이드) 시작 */
+.sel_slide {
+    margin-top: 60px;
+    position: relative;
+    height: 819px;
+}
+
+/* 좌우 화살표 */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px !important;
+    font-weight: bold !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: #48a1d2 !important;
+    top: auto !important;
+    bottom: 5px !important;
+    width: 20px !important;
+    height: 20px !important;
+    transition: all 0.3s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    transform: scale(1.2);
+}
+
+.swiper-button-prev {
+    left: 44% !important;
+}
+
+.swiper-button-next {
+    right: 44% !important;
+}
+
+/* 하단 점 */
+.swiper-pagination {
+    bottom: 6px !important;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #EAEAEA !important;
+    opacity: 1 !important;
+    margin: 0 5px !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: #5EBDF2 !important;
+}
+
+/* sel swiper 끝 */
+
+.sel_name {
+    font-family: 'Florencesans Bold';
+    font-size: 30px;
+}
+
+.sel_desc {
+    font-size: 25px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.sel_box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 33px;
+    height: 650px;
+}
+
+.sel_left {
+    position: relative;
+}
+
+.sel_left img {
+    display: block;
+}
+
+.sel_right {
+    width: 400px;
+    height: 595px;
+    margin-top: 8px;
+    margin-right: 102px;
+}
+
+.sel_right img {
+    display: block;
+}
+
+.sel_r_name {
+    font-size: 30px;
+    font-weight: 700;
+    color: #5DB7EA;
+}
+
+.sel_r_desc {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    margin-top: 30px;
+}
+
+/* 돋보기(hotspot) 활성화 시작 */
+.hotspot {
+    position: absolute;
+    width: 34px;
+    height: 35px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* 돋보기 교체 로직 */
+.hotspot .zoom_active {
+    display: none;
+}
+
+.hotspot:hover .zoom_default,
+.hotspot.active .zoom_default {
+    display: none;
+}
+
+.hotspot:hover .zoom_active,
+.hotspot.active .zoom_active {
+    display: block;
+}
+
+.product_view.active {
+    display: block;
+    /* 활성화 시 표시 */
+}
+
+.product_view {
+    display: none;
+    /* 기본 숨김 */
+    animation: sel_UpFade 0.5s ease-out forwards;
+}
+
+/* 돋보기 교체 시 product_view 애니메이션 */
+@keyframes sel_UpFade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 돋보기 활성화 끝 */
+
+/* sel DETAILS 버튼 스타일 적용 */
+.sel_btn-bubble {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: #5EBDF2;
+    color: #fff;
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 18px;
+    padding: 10px 29px;
+    border-radius: 50px !important;
+    margin-top: 35px;
+    -webkit-transition: color 0.45s;
+    transition: color 0.45s;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.sel_btn-bubble .btn-bubble-inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.sel_btn-bubble .btn-bubble-itembox {
+    position: relative;
+    display: block;
+    height: 100%;
+    -webkit-filter: url(#bubble-start);
+    filter: url(#bubble-start);
+}
+
+
+@supports ((-webkit-filter: url("#bubble-start")) or (filter: url("#bubble-start"))) .sel_btn-bubble .btn-bubble-item {
+    -webkit-transform: translate3d(0, 150%, 0) scale(1.4);
+    transform: translate3d(0, 150%, 0) scale(1.4);
+}
+
+.sel_btn-bubble .btn-bubble-item {
+    position: absolute;
+    top: 0;
+    width: 35%;
+    height: 100%;
+    background: #ffffff;
+    border-radius: 100%;
+    -webkit-transform: translate3d(0, 150%, 0) scale(1.7);
+    transform: translate3d(0, 150%, 0) scale(1.7);
+    -webkit-transition: -webkit-transform 0.45s;
+    transition: -webkit-transform 0.45s;
+    transition: transform 0.45s;
+    transition: transform 0.45s, -webkit-transform 0.45s;
+}
+
+.sel_btn-bubble .btn-bubble-item:nth-of-type(1) {
+    left: 0%;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+.sel_btn-bubble .btn-bubble-item:nth-of-type(2) {
+    left: 30%;
+    -webkit-transition-delay: 0.08s;
+    transition-delay: 0.08s;
+}
+
+.sel_btn-bubble .btn-bubble-item:nth-of-type(3) {
+    left: 60%;
+    -webkit-transition-delay: 0.16s;
+    transition-delay: 0.16s;
+}
+
+.sel_btn-bubble .btn-bubble-item:nth-of-type(4) {
+    left: 90%;
+    -webkit-transition-delay: 0.24s;
+    transition-delay: 0.24s;
+}
+
+.sel_btn-bubble:hover {
+    color: #5EBDF2;
+}
+
+.sel_btn-bubble:hover .btn-bubble-item {
+    transform: translateZ(0) scale(1.7);
+}
+
+/* store 스토어(매장 위치) */
+#store_wrap {
+    height: 900px;
+    background: url(../images/store_bg.png) no-repeat top center;
+}
+
+.store_container{
+    width: 1320px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 229px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.store_box{
+    width: 646px;
+    height: 443px;
+    backdrop-filter: blur(8px);
+    border-radius: 25px;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2),
+    inset 2px 2px 6px rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 41px 63px;
+    box-sizing: border-box;
+    color: #fff;
+    transition: transform 0.4s ease;
+}
+
+.store_title{
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 40px;
+}
+
+.store_subtitle{
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 45px;
+    margin-top: 30px;
+}
+
+.store_desc{
+    font-size: 25px;
+    font-family: 400;
+    line-height: 37px;
+    margin-top: 30px;
+}
+
+.store_info{
+    font-size: 25px;
+    font-family: 400;
+    margin-top: 25px;
+}
+
+.store_box:hover{
+    transform: translateY(-15px);
+}
+
+/* hl 하이라이트 */
+#hl_wrap{
+    width: 1320px;
+    height: 1605px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 152px;
+}
+
+.hl_title{
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 45px;
+    color: #52B6E8;
+    padding: 13px 0;
+    padding-left: 41px;
+    background: url(../images/title_icon.png) no-repeat left center;
+    display: table;
+    margin: 0 auto;
+}
+
+.hl_container{
+    padding-top: 70px;
+    text-align: center;
+}
+
+.hl_subtitle{
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 57px;
+}
+
+.hl_desc{
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 50px;
+    margin-top: 70px;
+}
+
+.hl_list{
+    margin-top: 137px;
+    position: relative;
+}
+
+.hl_list_top img, .hl_list_btm img{
+    display: block;
+    border-radius: 29px;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.hl_list_top{
+    display: flex;
+    justify-content: center;
+    gap: 33px;
+    align-items: flex-end;
+}
+
+.hl_list_btm {
+    display: flex;
+    justify-content: center;
+    gap: 33px;
+    margin-top: 33px;    
+}
+
+.hl_list_btm li:nth-child(2) img{
+    width: 450px;
+}
+
+/* hl_list 호버 스타일 적용 */
+.hl_link{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 29px;
+}
+
+/* hl_list 오버레이 상자*/
+.hl_overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* hl_list 글자상자 */
+.hl_info{
+    position: absolute;
+    color: #fff;
+    text-align: left;
+    bottom: 14px;
+    left: 24px;
+}
+
+.hl_info_long{
+    position: absolute;
+    color: #fff;
+    text-align: left;
+    bottom: 20px;
+    left: 24px;
+}
+
+.hl_info_title{
+    font-size: 27px;
+    font-weight: 600;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.hl_info_desc{
+    font-size: 23px;
+    font-weight: 400;
+    margin-top: 11px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+/* hl_link 호버 시 이미지 확대 */
+.hl_link:hover img{
+    transform: scale(1.1);
+}
+
+/* hl_link 호버 시 오버레이 */
+.hl_link:hover .hl_overlay{
+    opacity: 1;
+}
+
+/* hl_link 호버 시 글자 이동 */
+.hl_link:hover .hl_info_title{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hl_link:hover .hl_info_desc{
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.1s;
+}
+
+/* hl_3d icon */
+.hl_3d img{
+    width: 355px;
+    height: 340px;
+    position: absolute;
+    display: block;
+    top: 15px;
+    left: 241px;
+}
+
+/* marquee (흘러가는 글자) 효과 적용 */
+#marquee_wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee_inner {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
+    width: max-content;
+}
+
+.marquee_inner span {
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 55px;
+    color: #A9E1FB;
+    padding-right: 30px;
+}
+
+/* 왼쪽으로 흘러가는 애니메이션 */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* marquee 호버 시 일시정지 */
+.marquee_inner:hover {
+    animation-play-state: paused;
+}
+
+/* insta 인스타그램 */
+#insta_wrap{
+    height: 1017px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 171px;
+}
+
+.insta_title {
+    font-family: 'Florencesans Black', sans-serif;
+    font-size: 45px;
+    color: #52B6E8;
+    padding: 13px 0;
+    padding-left: 41px;
+    background: url(../images/title_icon.png) no-repeat left center;
+    display: table;
+    margin: 0 auto;
+}
+
+/* insta swiper (인스타 슬라이드) 시작 */
+.insta_slide{
+    margin-top: 152px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.insta_slide .swiper-slide{
+    width: 355px !important;
+    height: 470px !important;
+    margin: 0;
+}
+
+.insta_slide .swiper-slide img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.instaSwiper .swiper-wrapper {
+    transition-timing-function: ease-out !important; 
+}
+/* insta swiper 끝 */
+
+/* footer 푸터 */
+#footer_wrap{
+    height: 361px;
+    background: url(../images/footer_bg.png) no-repeat top center;
+}
+
+.footer_container{
+    width: 1320px;
+    height: 361px;
+    margin: 0 auto;
+    padding-top: 165px;
+    box-sizing: border-box;
+    display: flex;
+    /* justify-content: space-between; */
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.footer_container img{
+    display: block;
+}
+
+/* footer_left */
+.footer_left{
+    margin-top: 10px;
+    margin-left: 35px;
+}
+
+.footer_info{
+    color: #6E6E6E;
+    line-height: 25px;
+}
+
+.footer_util{
+    display: flex;
+    gap: 8px;
+    margin-top: 37px;
+}
+
+.footer_util li a{
+    display: block;
+    color: #989898;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer_util li a:hover{
+    color: #9898989d;
+}
+
+/* footer_right */
+.footer_right{
+    margin-top: 10px;
+    margin-left: 326px;
+}
+
+.footer_sns{
+    display: flex;
+    justify-content: right;
+    gap: 9px;
+}
+
+.footer_sns li a{
+    display: block;
+    position: relative;
+    width: 44px;
+    height: 44px;
+}
+
+.footer_sns li a img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* footer_sns 호버 시 변경*/
+.footer_sns li a img.sns_hover{
+    opacity: 0;
+}
+
+.footer_sns li a:hover img.sns_origin{
+    opacity: 0;
+}
+
+.footer_sns li a:hover img.sns_hover{
+    opacity: 1;
+}
+
+.footer_copy{
+    margin-top: 43px;
+    color: #989898;
+}
