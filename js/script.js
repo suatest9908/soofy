@@ -1,8 +1,9 @@
 // ScrollReveal //
+$(window).on('load', function() {
 const sr = ScrollReveal({
     origin: 'top',
     distance: '60px',   // 움직일 거리
-    duration: 1500,     // 속도 (1초)
+    duration: 1400,     // 속도 (1초)
     delay: 300,         // 시작 대기 시간
     easing: 'ease-out', // 부드러운 정도
     // reset: true
@@ -57,6 +58,8 @@ sr.reveal('.insta_container')
 // footer //
 sr.reveal('#footer_wrap', {duration:1000, distance:'30px'})
 sr.reveal('.footer_container', { distance:'30px'})
+});
+
 
 //  돋보기(Hotspot) 클릭 시 상품 정보 교체 //
     $('.hotspot').click(function() {
