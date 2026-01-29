@@ -5,7 +5,7 @@ const sr = ScrollReveal({
     duration: 1500,     // 속도 (1초)
     delay: 300,         // 시작 대기 시간
     easing: 'ease-out', // 부드러운 정도
-    reset: true
+    // reset: true
 });
 
 // about //

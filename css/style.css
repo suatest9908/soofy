@@ -104,9 +104,18 @@ body {
 
 
 /* banner 배너 */
-#main_banner {
-    background: url(../images/main_banner.png) no-repeat center;
-    height: 930px;
+
+#main_banner{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#main_banner video{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* about 브랜드 소개 */
